@@ -71,7 +71,8 @@
 	}
 </script>
 
-<style>
+<style scoped>
+@import "../common/uni.css";
 	button {
 		margin-top: 30upx;
 		margin-bottom: 30upx;

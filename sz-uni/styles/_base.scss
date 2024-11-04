@@ -1,0 +1,171 @@
+.btn {
+  @extend .border-solid;
+  @extend .leading-48;
+  @extend .text-center;
+
+  &.small {
+    @extend .leading-30;
+  }
+
+  &.btn-cyan-580 {
+    @extend .bg-cyan-580;
+    &:active {
+      @extend .bg-cyan-500;
+    }
+    &.disabled {
+      @extend .bg-gray-400;
+    }
+  }
+
+  &.btn-red-500 {
+    @extend .bg-red-500;
+    &:active {
+      @extend .bg-red-500;
+    }
+    &.disabled {
+      @extend .bg-red-400;
+    }
+  }
+}
+
+.btn-group {
+  &.small {
+    .btn {
+      @extend .leading-64;
+    }
+    &>.btn:first-child {
+      @extend .rounded-l-5;
+    }
+    &>.btn:last-child {
+      @extend .rounded-r-5;
+    }
+  }
+
+  .btn {
+    @extend .leading-48;
+  }
+  &>.btn:first-child {
+    @extend .rounded-l-12;
+  }
+  &>.btn:last-child {
+    @extend .rounded-r-12;
+  }
+  .btn:not(:last-child) {
+    @extend .border-r-0;
+  }
+}
+
+.head-pad {
+  height: var(--status-bar-height);
+  width: 100%;
+}
+
+.self-border-b {
+  @extend .border-solid;
+  @extend .border-b;
+  @extend .border-zinc-680;
+}
+
+.self-border-t {
+  @extend .border-solid;
+  @extend .border-t;
+  @extend .border-zinc-680;
+}
+
+.text-hidden {
+  overflow: hidden;
+  white-space: nowrap;
+  word-break: break-word;
+  text-overflow: ellipsis;
+}
+
+/* #ifdef H5 */
+/* 在h5中, tab bar占位需要加上 */
+.with-tab-bar {
+  @extend .pb-64;
+}
+.no-tab-bar-padding {
+  @extend .pb-0;
+}
+
+/* #endif */
+
+/* ============================== 公共基本样式 ============================== */
+body, uni-page-body {
+  @extend .h-full;
+  font-family: Arial, PingFangSC-Regular, Roboto, Helvetica Neue, Helvetica, Tahoma, PingFang SC-Light, Microsoft YaHei, sans-serif;
+  * {
+    box-sizing: border-box;
+    flex-shrink: 0;
+    // border: 0 none #9ca3af;
+    border: 0 none #E0E0E0;
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+  -webkit-text-fill-color: #ededed !important;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+  background-color: transparent;
+  background-image: none;
+  transition: background-color 50000s ease-in-out 0s; //背景色透明 生效时长 过渡效果 启用时延迟的时间
+}
+
+input {
+  background-color: transparent;
+}
+
+input:not(:placeholder-shown):disabled {
+  opacity: 1;
+  -webkit-text-fill-color: lighten(#000, 50%);
+}
+
+input:focus::-webkit-contacts-auto-fill-button {
+  opacity: 0;
+}
+
+input::-webkit-credentials-auto-fill-button {
+  display: none !important;
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+}
+
+::v-deep input:-internal-autofill-selected {
+  background-color: #ededed !important;
+}
+
+.lang-ar {
+  direction: rtl;
+  .rtl-text{
+    unicode-bidi: plaintext;
+    text-align: end;
+    & * {
+      unicode-bidi: plaintext;
+      text-align: end;
+    }
+  }
+}

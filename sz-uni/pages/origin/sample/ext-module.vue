@@ -50,3 +50,7 @@
 		}
 	}
 </script>
+<style scoped>
+@import "../common/nvue.css";
+@import "../common/uni-nvue.css";
+</style>

@@ -9,35 +9,41 @@
     {
       "path": "pages/origin/index/index",
       "style": {
+        "navigationStyle": "default",
         "navigationBarTitleText": "uni-app"
       }
     },
     {
       "path": "pages/origin/sample/ext-module",
       "style": {
+        "navigationStyle": "default",
         "navigationBarTitleText": "扩展 module"
       }
     },
     {
       "path": "pages/origin/sample/ext-component",
       "style": {
+        "navigationStyle": "default",
         "navigationBarTitleText": "扩展 component"
       }
     },
     {
       "path": "pages/origin/sample/richAlert",
       "style": {
+        "navigationStyle": "default",
         "navigationBarTitleText": "RichAlert"
       }
     },
     {
       "path": "pages/origin/sample/uts_toast",
       "style": {
+        "navigationStyle": "default",
         "navigationBarTitleText": "UTS 原生插件"
       }
     }
   ],
   "globalStyle": {
+    "navigationStyle": "custom",
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "uni-app",
     "navigationBarBackgroundColor": "#F8F8F8",

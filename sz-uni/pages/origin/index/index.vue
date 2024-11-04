@@ -1,5 +1,5 @@
 <template>
-	<view class="uni-container">
+	<view class="uni-container px-24">
 		<view class="uni-hello-text">
 			<text class="hello-text">uni原生插件示例</text>
 		</view>
@@ -80,5 +80,6 @@
 	}
 </script>
 
-<style>
+<style scoped>
+@import "../common/uni.css";
 </style>

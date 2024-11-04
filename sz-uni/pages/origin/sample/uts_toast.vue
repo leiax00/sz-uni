@@ -27,5 +27,6 @@
 	}
 </script>
 
-<style>
+<style scoped>
+@import "../common/uni.css";
 </style>

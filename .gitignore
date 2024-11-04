@@ -13,3 +13,5 @@
 **/yarn.lock
 **/*.bak
 **/assets/apps/*/www
+**/*.map
+sz-uni/styles/index.css

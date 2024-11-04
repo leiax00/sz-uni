@@ -1,17 +1,18 @@
 <script>
 	export default {
 		onLaunch: function() {
-			console.log('App Launch')
+			this.$logger.info('App Launch')
 		},
 		onShow: function() {
-			console.log('App Show')
+      this.$logger.info('App Show')
 		},
 		onHide: function() {
-			console.log('App Hide')
+      this.$logger.info('App Hide')
 		}
 	}
 </script>
 
-<style>
+<style lang="scss">
 	/*每个页面公共css */
+  @import "@/styles/index.scss";
 </style>

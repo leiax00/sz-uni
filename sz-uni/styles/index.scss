@@ -1,0 +1,92 @@
+@import "variables";
+@import "colors";
+@import "mixins";
+@import "base";
+@import "uni-ui";
+@import "animation";
+
+// 颜色生成
+@include generate-clazz($colors, 'text', 'color');
+@include generate-clazz($colors, 'bg', 'background-color');
+@include generate-clazz($colors, 'border', 'border-color');
+@include batch-generate-clazz($fillColor, 'fill', 'fill');
+
+// text
+@include batch-generate-clazz($fontSize, 'text', 'font-size');
+@include batch-generate-clazz($lineHeight, 'leading', 'line-height');
+@include batch-generate-clazz($fontWeight, 'font', 'font-weight');
+@include batch-generate-clazz($textAlign, 'text', 'text-align');
+
+// 尺寸: 间距, 长度等
+@include batch-generate-clazz($spacing, 'm', 'margin');
+@include batch-generate-clazz($spacing, 'mt', 'margin-top');
+@include batch-generate-clazz($spacing, 'ml', 'margin-left');
+@include batch-generate-clazz($spacing, 'mr', 'margin-right');
+@include batch-generate-clazz($spacing, 'mb', 'margin-bottom');
+@include batch-generate-clazz($spacing, 'mx', ('margin-left', 'margin-right'));
+@include batch-generate-clazz($spacing, 'my', ('margin-top', 'margin-bottom'));
+@include batch-generate-clazz($spacing, 'mis', 'margin-inline-start');
+@include batch-generate-clazz($spacing, 'mie', 'margin-inline-end');
+@include batch-generate-clazz($spacing, 'p', 'padding');
+@include batch-generate-clazz($spacing, 'pt', 'padding-top');
+@include batch-generate-clazz($spacing, 'pl', 'padding-left');
+@include batch-generate-clazz($spacing, 'pr', 'padding-right');
+@include batch-generate-clazz($spacing, 'pb', 'padding-bottom');
+@include batch-generate-clazz($spacing, 'px', ('padding-left', 'padding-right'));
+@include batch-generate-clazz($spacing, 'py', ('padding-top', 'padding-bottom'));
+@include batch-generate-clazz($width, 'w', 'width');
+@include batch-generate-clazz($width, 'h', 'height');
+@include batch-generate-clazz($spacing, 't', 'top');
+@include batch-generate-clazz($spacing, 'l', 'left');
+@include batch-generate-clazz($spacing, 'r', 'right');
+@include batch-generate-clazz($spacing, 'b', 'bottom');
+
+// Vertical Align
+@include batch-generate-clazz($aligns, 'align', 'vertical-align');
+@include batch-generate-clazz($overflow, 'overflow', 'overflow');
+@include batch-generate-clazz($overflow, 'overflow-x', 'overflow-x');
+@include batch-generate-clazz($overflow, 'overflow-y', 'overflow-y');
+
+// display
+@include batch-generate-clazz($display, '', 'display');
+
+@include batch-generate-clazz($position, '', 'position');
+
+// flex
+@include batch-generate-clazz($flexWeight, 'flex', 'flex');
+@include batch-generate-clazz($flexGrow, 'grow', 'flex-grow');
+@include batch-generate-clazz($flexGrow, 'shrink', 'flex-shrink');
+@include batch-generate-clazz($flexDirection, 'flex', 'flex-direction');
+@include batch-generate-clazz($wrap, 'flex', 'flex-wrap');
+@include batch-generate-clazz($flexJustify, 'justify', 'justify-items');
+@include batch-generate-clazz($flexAlign, '', 'align-items');
+@include batch-generate-clazz($flexJustifyContent, 'justify', 'justify-content');
+@include batch-generate-clazz($flexAlignContent, 'content', 'align-content');
+
+// border
+@include batch-generate-clazz($borderStyle, 'border', 'border-style');
+@include batch-generate-clazz($borderWidth, 'border', 'border-width');
+@include batch-generate-clazz($borderWidth, 'border-t', 'border-top-width');
+@include batch-generate-clazz($borderWidth, 'border-r', 'border-right-width');
+@include batch-generate-clazz($borderWidth, 'border-b', 'border-bottom-width');
+@include batch-generate-clazz($borderWidth, 'border-l', 'border-left-width');
+@include batch-generate-clazz($borderWidth, 'border-x', ('border-left-width','border-right-width'));
+@include batch-generate-clazz($borderWidth, 'border-y', ('border-top-width','border-bottom-width'));
+@include batch-generate-clazz($borderRadius, 'rounded', 'border-radius');
+@include batch-generate-clazz($borderRadius, 'rounded-tl', 'border-top-left-radius');
+@include batch-generate-clazz($borderRadius, 'rounded-tr', 'border-top-right-radius');
+@include batch-generate-clazz($borderRadius, 'rounded-br', 'border-bottom-right-radius');
+@include batch-generate-clazz($borderRadius, 'rounded-bl', 'border-bottom-left-radius');
+@include batch-generate-clazz($borderRadius, 'rounded-t', ('border-top-left-radius','border-top-right-radius'));
+@include batch-generate-clazz($borderRadius, 'rounded-r', ('border-top-right-radius','border-bottom-right-radius'));
+@include batch-generate-clazz($borderRadius, 'rounded-b', ('border-bottom-left-radius','border-bottom-right-radius'));
+@include batch-generate-clazz($borderRadius, 'rounded-l', ('border-bottom-left-radius','border-top-left-radius'));
+
+// box shadow
+@include batch-generate-clazz($boxShadow, 'shadow', box-shadow);
+
+// z-index
+@include batch-generate-clazz($zIndex, 'z', z-index);
+
+//min-width
+@include batch-generate-clazz($minW, 'min-w', min-width);

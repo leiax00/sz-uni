@@ -1,0 +1,43 @@
+@mixin generate-clazz($source, $prefix, $clazzLabel) {
+  @each $name, $vals in $source {
+    @if type-of($vals) == map {
+      // 遍历映射中的子项，例如 slate 中的不同色阶
+      @each $shade, $hex in $vals {
+        // 生成对应的类名和颜色值
+        .#{$prefix}-#{"" + $name}-#{$shade} {
+          #{$clazzLabel}: $hex;
+        }
+      }
+    } @else {
+      // 生成单个颜色的类名和颜色值
+      .#{$prefix}-#{"" + $name} {
+        #{$clazzLabel}: $vals;
+      }
+    }
+  }
+}
+
+@mixin batch-generate-clazz($source, $prefix:null, $clazzLabel:null) {
+  $prefix_str: '';
+  @if $prefix != null {
+    @if $prefix != '' {
+      $prefix_str: #{$prefix}-;
+    }
+  }
+  @each $name, $vals in $source {
+    $prefix_str_item: $prefix_str;
+    // grow: {flex-grow: 1;}
+    @if $name == '' {
+      $prefix_str_item: $prefix
+    }
+    .#{$prefix_str_item}#{"" + $name} {
+      @if type-of($clazzLabel) == list {
+        @each $itemLabel in $clazzLabel {
+          #{$itemLabel}: #{$vals};
+        }
+      } @else {
+        #{$clazzLabel}: #{$vals};
+      }
+    }
+  }
+}

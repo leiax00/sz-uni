@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<myText ref="telText" tel="12305" style="width:200;height:100" @onTel="onTel" @click="myTextClick"></myText>
+		<myText ref="telText" tel="12305" style="width:200px;height:100px" @onTel="onTel" @click="myTextClick"></myText>
 	</div>
 </template>
 
@@ -21,4 +21,8 @@
 			}
         }  
     }  
-</script>  
+</script>
+<style scoped>
+@import "../common/nvue.css";
+@import "../common/uni-nvue.css";
+</style>

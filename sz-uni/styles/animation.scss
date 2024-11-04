@@ -1,0 +1,43 @@
+.rotate {
+  animation: spin 1s linear infinite; /* 2秒内完成一次旋转，线性速度，循环无限次 */
+}
+
+/* 定义旋转动画 */
+@keyframes spin {
+  from {
+    transform: rotate(0deg); /* 从 0 度开始 */
+  }
+  to {
+    transform: rotate(360deg); /* 旋转到 360 度 */
+  }
+}
+
+.breath{
+  animation: myBreath 2s linear infinite;
+}
+@keyframes myBreath {
+  0%{
+    transform: scale(0.88);
+  }
+  50%{
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(0.88);
+  }
+}
+
+.breath-102 {
+  animation: breath-102 1s linear infinite;
+}
+@keyframes breath-102 {
+  0%{
+    transform: scale(1.02);
+  }
+  50%{
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(1.02);
+  }
+}
