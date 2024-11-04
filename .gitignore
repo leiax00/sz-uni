@@ -1,0 +1,15 @@
+**/.idea
+**/*.iml
+**/.hbuilderx
+**/.vscode
+
+**/build
+**/dist
+**/node_modules
+**/unpackage
+
+**/*.log
+**/package-lock.json
+**/yarn.lock
+**/*.bak
+**/assets/apps/*/www
