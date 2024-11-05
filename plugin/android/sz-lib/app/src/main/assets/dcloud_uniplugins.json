@@ -6,6 +6,16 @@
           "type": "module",
           "name": "TestModule",
           "class": "io.dcloud.uniplugin.TestModule"
+        },
+        {
+          "type": "module",
+          "name": "main",
+          "class": "cn.leiax00.app.szuni.module.Main"
+        },
+        {
+          "type": "module",
+          "name": "http",
+          "class": "cn.leiax00.app.szuni.module.Http"
         }
       ]
     },

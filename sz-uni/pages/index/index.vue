@@ -3,6 +3,7 @@
 		<image class="logo" src="/static/logo.png"></image>
 		<view class="text-area">
 			<text class="title">{{title}}</text>
+      <button type="primary" @click="openOrigin">打开离线SDK测试页面</button>
 		</view>
 	</view>
 </template>
@@ -18,7 +19,9 @@
 
 		},
 		methods: {
-
+      openOrigin() {
+        uni.navigateTo({ url: "/pages/origin/index/index" })
+      },
 		}
 	}
 </script>

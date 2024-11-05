@@ -1,14 +1,26 @@
 <script>
-	export default {
+	import apis from "@/common/apis";
+
+  export default {
 		onLaunch: function() {
-			this.$logger.info('App Launch')
+      this.initPlugin()
+      this.$logger.info('App Launch')
 		},
 		onShow: function() {
       this.$logger.info('App Show')
 		},
 		onHide: function() {
       this.$logger.info('App Hide')
-		}
+		},
+    methods: {
+      initPlugin() {
+        const self = this
+        apis.plugin.initPlugin()
+        plus.globalEvent.addEventListener('sz-uni-event', function ({action, data}) {
+          self.$logger.info(`Received Event, Action: ${action}, Data: ${JSON.stringify(data)}`);
+        })
+      }
+    }
 	}
 </script>
 
