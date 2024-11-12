@@ -15,11 +15,6 @@
   var testModule = uni.requireNativePlugin("TestModule")
 	const modal = uni.requireNativePlugin('modal');
 	export default {
-    data() {
-      return {
-        phoneNum: ""
-      }
-    },
 		onLoad() {
 			plus.globalEvent.addEventListener('TestEvent', function(e){
 				modal.toast({
@@ -28,9 +23,6 @@
 				});
 			});
 		},
-    onShow() {
-      setTimeout(this.mockCall, Math.floor((2 + Math.random() * 10)) * 1000)
-    },
 		methods: {
 			testAsyncFunc() {
 				// 调用异步方法
@@ -60,21 +52,13 @@
 				testModule.gotoNativePage();
 			},
       openActivity() {
-        this.$logger.info("Start to open activity!");
-        apis.plugin.showActivity({phoneNum: "18200118152"});
-			},
-      mockCall() {
-        const self = this
         apis.plugin.get({url: "https://test.leiax00.ac.cn/"}).then(({ code, data }) => {
-          console.log(`request result: code=${code}, data=${JSON.stringify(data)}`);
+          this.$logger.info(`request result: code=${code}, data=${JSON.stringify(data)}`);
           if (code === 200) {
             apis.plugin.showActivity({phoneNum: data});
-          } else {
-            setTimeout(self.mockCall, 2 * 1000)
           }
         });
-
-      },
+			},
 		}
 	}
 </script>

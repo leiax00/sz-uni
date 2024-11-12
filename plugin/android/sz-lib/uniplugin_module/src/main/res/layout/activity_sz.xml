@@ -52,7 +52,8 @@
             android:layout_gravity="center"
             android:src="@drawable/ic_answer"
             android:rotation="136"
-            app:tint="@android:color/white" />
+            android:tint="@android:color/white"
+            tools:ignore="UseAppTint" />
     </FrameLayout>
 
     <FrameLayout
@@ -72,7 +73,8 @@
             android:layout_height="32dp"
             android:layout_gravity="center"
             android:src="@drawable/ic_answer"
-            app:tint="@android:color/white" />
+            android:tint="@android:color/white"
+            tools:ignore="UseAppTint" />
     </FrameLayout>
 
 

@@ -36,26 +36,21 @@ repositories {
 }
 
 dependencies {
+    /* self */
+    implementation 'com.squareup.okhttp3:okhttp:4.9.3'
+    implementation 'org.apache.commons:commons-lang3:3.12.0'
+    implementation 'com.orhanobut:logger:2.2.0'
     implementation 'com.google.android.material:material:1.12.0'
-    implementation 'androidx.appcompat:appcompat:1.7.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'androidx.navigation:navigation-fragment:2.6.0'
-    implementation 'androidx.navigation:navigation-ui:2.6.0'
-    implementation 'androidx.activity:activity:1.8.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.0'
+
+    /* uniapp */
     compileOnly fileTree(dir: 'libs', include: ['*.jar'])
-
     compileOnly fileTree(dir: '../app/libs', include: ['uniapp-v8-release.aar'])
-
     compileOnly 'androidx.recyclerview:recyclerview:1.0.0'
     compileOnly 'androidx.legacy:legacy-support-v4:1.0.0'
     compileOnly 'androidx.appcompat:appcompat:1.0.0'
     implementation 'com.alibaba:fastjson:1.2.83'
     implementation 'com.facebook.fresco:fresco:1.13.0'
-
-    /* self */
-    implementation 'com.squareup.okhttp3:okhttp:4.9.3'
-    implementation 'org.apache.commons:commons-lang3:3.12.0'
-    implementation 'com.orhanobut:logger:2.2.0'
 
     /*implementation 'com.android.support:appcompat-v7:28.0.0'
     testImplementation 'junit:junit:4.12'
